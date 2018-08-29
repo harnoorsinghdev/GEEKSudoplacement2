@@ -1,0 +1,70 @@
+Link-https://practice.geeksforgeeks.org/problems/c-functions-set-1introduction/1/?track=SP%20-%202.2
+
+C++ Functions (Sum of numbers) | Set 1 Submissions: 2691   Accuracy: 62.75%   Difficulty: School *School Problem's Submission isn't counted in score!
+      
+Given three numbers, you have to write a function named calcSum which takes these 3 numbers as arguments and returns their sum.
+
+Note:The Input/Ouput format and Example given are used for system's internal purpose, and should be used by a user for Expected Output only. As it is a function problem, hence a user should not read any input from stdin/console. The task is to complete the function specified, and not to write the full code.
+ 
+
+Input: First line of input contains a single integer T which denotes the number of test cases. Then T test cases follow. Each test case consists of a single line which contains three space separated integers A, B, and C.
+
+Output: Corresponding to each test case, output sum of A , B and C in a new line.
+
+Constraints:
+1<=T<=200
+1<=A<=100
+1<=B<=100
+1<=C<=100
+
+Example:
+Input:
+3
+1 2 3
+5 6 7
+2 5 3
+
+Output:
+6
+18
+10
+
+
+
+{
+#include <iostream>
+using namespace std;
+int calcSum(int a,int b,int c);
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int a,b,c;
+	    cin>>a>>b>>c;
+	    int sum = calcSum(a,b,c);
+	    cout<<sum<<"
+";
+	}
+	
+	return 0;
+}
+}
+
+/*Please note that it's Function problem i.e.
+you need to write your solution in the form of Function(s) only.
+Driver Code to call/invoke your function is mentioned above.*/
+
+/*  Write your function here */
+/* The function should be named calcSum
+    and accepts three parameters of integer type
+    and returns the sum of the three integers */
+    
+int calcSum(int a, int b, int c)    
+{
+    // Your code here
+    
+    
+    return a+b+c;
+    
+}
