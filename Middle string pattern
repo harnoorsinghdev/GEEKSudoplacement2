@@ -1,0 +1,70 @@
+Link: https://practice.geeksforgeeks.org/problems/middle-pattern/1/?track=SP%20-%202.2
+
+Given an odd length word your task is to complete the function printPattern that takes a string s as its argument and prints it from the middle of the word such that it follows the following pattern.
+ 
+
+Input: PROGRAM                            Input: RAT
+Output:                                   Output:
+            G                                       A
+          GR                                      AT  
+        GRA                                     ATR
+      GRAM
+    GRAMP
+  GRAMPR
+GRAMPRO
+
+The above is proper shaped pattern for the test case, but when
+printed in a single line it becomes as shown in the output. 
+
+Input:
+
+The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case consists of a single line containing an odd length string s.
+
+
+Output:
+Corresponding to each test case in a new line print the pattern in a  single line where each row of the pattern is separated by a "$" instead of a new line.
+
+
+Constraints:
+1 ≤ T ≤ 20
+1<=size of string(s)<=20
+
+
+Example(To be used only for expected ouput):
+Input
+2
+PROGRAM
+RAT
+
+Output
+
+            G$          GR$        GRA$      GRAM$    GRAMP$  GRAMPR$GRAMPRO$
+    A$  AT$ATR$
+ 
+ void printPattern(string s)
+{
+  int i,j,m,k,n,l;
+  n=s.length();
+  l=2*(n-1);   // calculation of l i.e.,# of gaps.
+
+  for(i=0;i<n;i++)
+  {
+       j=l;
+      k=n/2;
+     while(j)
+     {
+         cout<<" ";
+         j--;
+     }
+     
+      for(m=0;m<=i;m++)
+      {
+          cout<<s[k];
+          k++;
+          if(k==n)
+          k=0;
+      }
+      l-=2;
+      cout<<"$";
+  }               // No use of endl;
+}
